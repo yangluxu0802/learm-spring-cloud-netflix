@@ -15,6 +15,7 @@
         <module>discovery-service</module>
         <module>turbine</module>
         <module>hystrix-dashboard</module>
+        <module>service</module>
     </modules>
 
     <properties>
@@ -24,8 +25,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <lombok.version>1.18.8</lombok.version>
-        <spring.boot.version>2.0.6.RELEASE</spring.boot.version>
-        <spring.cloud.version>Finchley.SR2</spring.cloud.version>
+        <spring.boot.version>2.1.9.RELEASE</spring.boot.version>
+        <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
     </properties>
 
     <dependencyManagement>

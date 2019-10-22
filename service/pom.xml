@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>producer-service</artifactId>
+    <artifactId>service</artifactId>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,6 +19,11 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <modules>
+        <module>producer-service</module>
+        <module>consumer-service</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -55,5 +61,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
