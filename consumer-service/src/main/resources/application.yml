@@ -15,6 +15,14 @@ feign:
     #开启熔断
     enabled: true
 
+hystrix:
+  command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 3000
+
 management:
   endpoints:
     web:
