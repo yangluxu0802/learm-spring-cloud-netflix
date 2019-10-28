@@ -23,7 +23,7 @@
     <modules>
         <module>producer-service</module>
         <module>consumer-service</module>
-        <module>auth-service</module>
+        <module>auth</module>
         <module>organization</module>
     </modules>
 
