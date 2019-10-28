@@ -1,4 +1,4 @@
-package com.luxu.bootstrap.controller;
+package cn.luxu.bootstrap.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;

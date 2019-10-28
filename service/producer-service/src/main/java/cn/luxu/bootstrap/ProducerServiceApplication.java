@@ -1,4 +1,4 @@
-package com.luxu.bootstrap;
+package cn.luxu.bootstrap;
 
 
 import org.springframework.boot.SpringApplication;
@@ -17,8 +17,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableFeignClients
 @EnableHystrix
-public class ConsumerServiceApplication {
+public class ProducerServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerServiceApplication.class, args);
+        SpringApplication.run(ProducerServiceApplication.class, args);
     }
 }

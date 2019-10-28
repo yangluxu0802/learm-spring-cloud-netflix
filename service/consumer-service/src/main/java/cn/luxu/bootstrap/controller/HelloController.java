@@ -1,6 +1,6 @@
-package com.luxu.bootstrap.controller;
+package cn.luxu.bootstrap.controller;
 
-import com.luxu.bootstrap.client.HelloRemote;
+import cn.luxu.bootstrap.client.HelloRemote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

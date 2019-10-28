@@ -1,6 +1,6 @@
-package com.luxu.bootstrap.client;
+package cn.luxu.bootstrap.client;
 
-import com.luxu.bootstrap.controller.fallback.HelloRemoteFallback;
+import cn.luxu.bootstrap.controller.fallback.HelloRemoteFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

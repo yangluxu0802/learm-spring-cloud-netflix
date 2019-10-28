@@ -1,6 +1,6 @@
-package com.luxu.bootstrap.controller.fallback;
+package cn.luxu.bootstrap.controller.fallback;
 
-import com.luxu.bootstrap.client.HelloRemote;
+import cn.luxu.bootstrap.client.HelloRemote;
 import org.springframework.stereotype.Component;
 
 /**
