@@ -13,8 +13,9 @@
         <module>discovery-service</module>
         <module>turbine</module>
         <module>hystrix-dashboard</module>
-        <module>service</module>
         <module>common</module>
+        <module>auth</module>
+        <module>upms</module>
     </modules>
 
     <properties>
@@ -26,7 +27,6 @@
         <lombok.version>1.18.8</lombok.version>
         <spring.boot.version>2.1.9.RELEASE</spring.boot.version>
         <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
-        <spring-boot-mapper.version>2.1.5</spring-boot-mapper.version>
     </properties>
 
     <dependencyManagement>
@@ -45,18 +45,16 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>${spring-boot-mapper.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
