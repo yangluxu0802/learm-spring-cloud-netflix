@@ -18,6 +18,16 @@ spring:
             - Path=/auth/oauth/**
           filters:
             - StripPrefix=1
+        # 用户中心
+        - id: user
+        uri: lb://user
+        predicates:
+          - Path=/user/users/**
+          - Path=/user/permissions/**
+          - Path=/user/roles/**
+          - Path=/user/users-anon/**
+        filters:
+          - StripPrefix=1
 eureka:
   client:
     service-url:
