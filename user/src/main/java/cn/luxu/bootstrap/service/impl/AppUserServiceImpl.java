@@ -112,15 +112,11 @@ public class AppUserServiceImpl implements AppUserService {
                 if (!CollectionUtils.isEmpty(sysPermissions)) {
                     Set<String> permissions = sysPermissions.parallelStream().map(SysPermission::getPermission)
                             .collect(Collectors.toSet());
-
                     loginAppUser.setPermissions(permissions);// 设置权限集合
                 }
-
             }
-
             return loginAppUser;
         }
-
         return null;
     }
 
