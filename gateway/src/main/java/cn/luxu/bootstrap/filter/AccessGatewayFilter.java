@@ -24,6 +24,7 @@ import reactor.core.publisher.Mono;
 public class AccessGatewayFilter implements GlobalFilter {
 
     private static final String BEARER = "Bearer";
+    private static final String ACCESS_TOKEN = "access_token";
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -31,13 +32,14 @@ public class AccessGatewayFilter implements GlobalFilter {
         String authentication = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
         String method = request.getMethodValue();
         String url = request.getPath().value();
-        log.debug("url:{},method:{},headers:{}", url, method, request.getHeaders());
+        String accessToken = request.getQueryParams().getFirst(ACCESS_TOKEN);
+        log.debug("url:{},method:{},headers:{},accessToken:{}", url, method, request.getHeaders(),accessToken);
         //不需要网关签权的url
         if (true) {
             return chain.filter(exchange);
         }
         // 如果请求未携带token信息, 直接跳出
-        if (StringUtils.isBlank(authentication) || !authentication.startsWith(BEARER)) {
+        if (StringUtils.isBlank(authentication) || !authentication.startsWith(BEARER) || StringUtils.isBlank(accessToken)) {
             log.debug("url:{},method:{},headers:{}, 请求未携带token信息", url, method, request.getHeaders());
             return unauthorized(exchange);
         }
