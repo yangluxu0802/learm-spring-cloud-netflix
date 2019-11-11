@@ -36,7 +36,7 @@ mybatis:
   mapper-locations: classpath:/mappers/*
   configuration:
     mapUnderscoreToCamelCase: true
-
+serviceId: auth
 
 
 
